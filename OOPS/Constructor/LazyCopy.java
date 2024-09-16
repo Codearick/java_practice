@@ -1,4 +1,4 @@
-package Constructor;
+
 public class LazyCopy {
     public static void main(String [] args){
         Student s1 = new Student();
