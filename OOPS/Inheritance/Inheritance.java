@@ -1,17 +1,23 @@
+
 public class Inheritance {
     public static void main(String [] args) {
-        Fish shark = new Fish();
+        Pisces shark = new Pisces("Shark");
 
-        shark.eat();
+        shark.eat(shark);
     }
 }
 
 //Base class
 class Animal{
     String color; 
+    String name;
 
-    void eat(){
-        System.out.println("This Animal Eats...");
+    Animal(String name){
+        this.name = name;
+    }
+
+    void eat(Animal s1){
+        System.out.println(s1.name + " Eats...");
     }
 
     void breathe(){
@@ -20,8 +26,12 @@ class Animal{
 }
 
 //Derived class
-class Fish extends Animal{
+class Pisces extends Animal{
     int fins;
+
+    Pisces(String name){
+        super(name);
+    }
 
     void swims(){
         System.out.println("Swims in water...");
